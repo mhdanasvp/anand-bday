@@ -82,7 +82,7 @@
 <body>
     <div class="parent">
         <div class="loading">
-            <h2>LOADING...</h2>
+            <h2 onclick="play()">CliCk HERE</h2>
         </div>
 
         <div class="wrapper">
@@ -90,7 +90,7 @@
             height="150px">
 
             <h1>HAPPY BIRTHDAY<br/>@<br/><span style="display: block; font-size: 27px;margin-top: 10px;">ANAND MOHAN</span></h1>
-          
+            
         </div>
     </div>
     <script>
@@ -100,19 +100,21 @@
           const play=()=>{
             var aud = new Audio('./Sequence 01.mp3');
           aud.play()
-          setTimeout(()=>{
-            aud.pause()
-          },12000)
-          }
-        
-        
-        window.addEventListener("load",()=>{
-            play()
-            const wrapper=document.querySelector(".wrapper")
+          const wrapper=document.querySelector(".wrapper")
             const loading=document.querySelector(".loading")
             wrapper.style.display="block"
             loading.style.display="none"
-         })
+         
+          }
+        
+        
+        // window.addEventListener("load",()=>{
+        //     play()
+        //     const wrapper=document.querySelector(".wrapper")
+        //     const loading=document.querySelector(".loading")
+        //     wrapper.style.display="block"
+        //     loading.style.display="none"
+        //  })
         
     </script>
 </body>
