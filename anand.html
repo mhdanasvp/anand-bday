@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .parent{
+            height: 450px;
+            width: 300px;
+            background-color: #ddd;
+            padding: 10px;
+           
+
+        }
+        .loading{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .wrapper{
+            display: none;
+            background-color: #fff;
+            width: 100%;
+            position: relative;
+            height: 100%;
+            text-align: center;
+
+        }
+        .wrapper img{
+            position: absolute;
+            top: 50px;
+            left: 65px;
+            border-radius: 10px;
+            border: 5px solid #ddd;
+            animation: anim 3s ease-in-out infinite;
+        }
+        h2{
+            color: #004080;
+        }
+        h1{
+            position: absolute;
+            top: 260px;
+            left: 17px;
+            color: #004080;
+            letter-spacing: 1.5px;
+            font-size: 30px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        @keyframes anim{
+            0%{
+                transform: rotate(0deg);
+
+            }
+            33.33%{
+                transform: rotate(-30deg);
+            }
+            66.66%{
+                transform: rotate(30deg);
+            }
+            100%{
+                transform: rotate(0deg);
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <div class="loading">
+            <h2>LOADING...</h2>
+        </div>
+
+        <div class="wrapper">
+            <img src="./anand.jpeg" alt="" width="150px"
+            height="150px">
+
+            <h1>HAPPY BIRTHDAY<br/>@<br/><span style="display: block; font-size: 27px;margin-top: 10px;">ANAND MOHAN</span></h1>
+          
+        </div>
+    </div>
+    <script>
+         
+         
+         
+          const play=()=>{
+            var aud = new Audio('./Sequence 01.mp3');
+          aud.play()
+          setTimeout(()=>{
+            aud.pause()
+          },12000)
+          }
+        
+        
+        window.addEventListener("load",()=>{
+            play()
+            const wrapper=document.querySelector(".wrapper")
+            const loading=document.querySelector(".loading")
+            wrapper.style.display="block"
+            loading.style.display="none"
+         })
+        
+    </script>
+</body>
+</html>
